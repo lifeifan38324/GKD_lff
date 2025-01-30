@@ -1,0 +1,37 @@
+{
+  "id": 133,
+  "name": "yimojin_Subscription",
+  "version": 0,
+  "author": "yimojin",
+  "updateUrl": "https://gist.github.com/lisonge/3f5693182ad4ef5e307be760dba22bcb/raw/gkd.json5",
+  "checkUpdateUrl": "https://gist.github.com/lisonge/3f5693182ad4ef5e307be760dba22bcb/raw/gkd.json5",
+  "supportUri": "https://gkd.li/",
+  "categories": [],
+  "globalGroups": [],
+  "apps": [
+    {
+      "id": "com.jooan.qalink",
+      "name": "喵眼精灵",
+      "groups": [
+        {
+          "key": 0,
+          "name": "垃圾广告-我的下方",
+          "desc": "点击x按钮关闭广告",
+          "activityIds": [
+            "com.jooan.qalink.com.jooan.qiaoanzhilian.ali.view.main_page.NewMainDeviceListActivity",
+          ],
+          "rules": [
+            {
+              "key": -1,
+              "fastQuery": true,
+              "matches": 'ImageView[vid="anythink_myoffer_banner_close" && clickable=true]',
+              "snapshotUrls": [
+                "https://i.gkd.li/snapshot/1737640566313",
+              ]
+            },
+            ]
+        },
+      ]
+    }
+  ]
+}

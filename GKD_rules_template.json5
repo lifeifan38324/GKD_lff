@@ -1,0 +1,257 @@
+{
+  "id": 133,
+  "name": "yimojin_Subscription",
+  "version": 0,
+  "author": "yimojin",
+  "updateUrl": "https://gist.github.com/lisonge/3f5693182ad4ef5e307be760dba22bcb/raw/gkd.json5",
+  "checkUpdateUrl": "https://gist.github.com/lisonge/3f5693182ad4ef5e307be760dba22bcb/raw/gkd.json5",
+  "supportUri": "https://gkd.li/",
+  "categories": [
+    {
+      "key": 0,
+      "name": "开屏广告"
+    },
+    {
+      "enable": false,
+      "key": 1,
+      "name": "通知提示"
+    },
+    {
+      "enable": false,
+      "key": 2,
+      "name": "更新提示"
+    },
+    {
+      "enable": false,
+      "key": 3,
+      "name": "定位提示"
+    },
+    {
+      "enable": false,
+      "key": 4,
+      "name": "评价提示"
+    },
+    {
+      "enable": false,
+      "key": 5,
+      "name": "青少年模式"
+    },
+    {
+      "enable": false,
+      "key": 6,
+      "name": "权限提示"
+    },
+    {
+      "enable": false,
+      "key": 7,
+      "name": "全屏广告"
+    },
+    {
+      "enable": false,
+      "key": 8,
+      "name": "局部广告"
+    },
+    {
+      "enable": false,
+      "key": 9,
+      "name": "分段广告"
+    },
+    {
+      "enable": false,
+      "key": 10,
+      "name": "功能类"
+    },
+    {
+      "enable": false,
+      "key": 11,
+      "name": "其他"
+    }
+  ],
+  "globalGroups": [],
+  "apps": [
+    {
+      "id": "com.tencent.mm",
+      "name": "微信",
+      "groups": [
+        {
+          "key": 0,
+          "name": "分段广告-朋友圈广告",
+          "desc": "点击卡片广告右上角,直接关闭/出现菜单,确认关闭",
+          "activityIds": [
+            "com.tencent.mm.plugin.sns.ui.SnsTimeLineUI",
+            "com.tencent.mm.plugin.sns.ui.improve.ImproveSnsTimelineUI",
+            "com.tencent.mm.plugin.profile.ui.ContactInfoUI"
+          ],
+          "rules": [
+            {
+              "key": -1,
+              "fastQuery": true,
+              "matches": "@LinearLayout[clickable=true] > [text=\"广告\" || text=\"廣告\" || text=\"Sponsored\"][visibleToUser=true]",
+              "exampleUrls": "https://e.gkd.li/d1941064-d4e9-4bb2-99ab-ba30e0ce8126",
+              "snapshotUrls": [
+                "https://i.gkd.li/i/13000395",
+                "https://i.gkd.li/i/12905837",
+                "https://i.gkd.li/i/13791200",
+                "https://i.gkd.li/i/16568338"
+              ]
+            },
+            {
+              "key": 0,
+              "matches": "RelativeLayout >5 LinearLayout[childCount=2] > TextView[text!=null] + LinearLayout[visibleToUser=true][clickable=true][childCount=0]",
+              "snapshotUrls": "https://i.gkd.li/i/14647413"
+            },
+            {
+              "key": 1,
+              "fastQuery": true,
+              "position": {
+                "left": "width * 0.9223",
+                "top": "width * 0.0349"
+              },
+              "matches": "@LinearLayout >2 [text=\"广告\"][visibleToUser=false]",
+              "snapshotUrls": [
+                "https://i.gkd.li/i/14783802",
+                "https://i.gkd.li/i/15531539"
+              ]
+            },
+            {
+              "preKeys": [
+                -1,
+                0,
+                1
+              ],
+              "key": 25,
+              "name": "点击[关闭]",
+              "fastQuery": true,
+              "matches": "[text^=\"关闭\"][clickable=true]",
+              "snapshotUrls": [
+                "https://i.gkd.li/i/12907642",
+                "https://i.gkd.li/i/13926578",
+                "https://i.gkd.li/i/15531274"
+              ]
+            },
+            {
+              "preKeys": [
+                -1,
+                0
+              ],
+              "key": 26,
+              "name": "点击[Close]",
+              "fastQuery": true,
+              "matches": "[text*=\"Close\"][clickable=true]",
+              "snapshotUrls": [
+                "https://i.gkd.li/i/14207480",
+                "https://i.gkd.li/i/15137016"
+              ]
+            },
+            {
+              "preKeys": [
+                -1,
+                0
+              ],
+              "key": 27,
+              "name": "点击[關閉此廣告]",
+              "fastQuery": true,
+              "matches": "[text=\"關閉此廣告\"][clickable=true]",
+              "snapshotUrls": "https://i.gkd.li/i/13791202"
+            },
+            {
+              "preKeys": [
+                -1,
+                0,
+                1
+              ],
+              "key": 28,
+              "name": "点击[关闭该广告]",
+              "fastQuery": true,
+              "matches": "@LinearLayout[index=1][clickable=true] <2 * < * - [text*=\"广告\"]",
+              "snapshotUrls": [
+                "https://i.gkd.li/i/12642584",
+                "https://i.gkd.li/i/14647839",
+                "https://i.gkd.li/i/14783820"
+              ]
+            },
+            {
+              "preKeys": [
+                -1,
+                0
+              ],
+              "key": 29,
+              "name": "点击[Close the ad]",
+              "fastQuery": true,
+              "matches": "@LinearLayout[clickable=true] > [text*=\"Close\"]",
+              "snapshotUrls": [
+                "https://i.gkd.li/i/12905838",
+                "https://i.gkd.li/i/15284966"
+              ]
+            },
+            {
+              "preKeys": [
+                28
+              ],
+              "key": 50,
+              "name": "点击[关闭]",
+              "matches": "[text*=\"关闭\"][clickable=true]",
+              "snapshotUrls": [
+                "https://i.gkd.li/i/12663984",
+                "https://i.gkd.li/i/14647940",
+                "https://i.gkd.li/i/14783534"
+              ]
+            },
+            {
+              "preKeys": [
+                29
+              ],
+              "key": 51,
+              "name": "点击\"Close\"",
+              "matches": "[text=\"Close\"][clickable=true]",
+              "snapshotUrls": "https://i.gkd.li/i/12905846"
+            },
+            {
+              "preKeys": [
+                50
+              ],
+              "key": 75,
+              "name": "点击[确认]",
+              "matches": "[text=\"确认\"][clickable=true]",
+              "snapshotUrls": "https://i.gkd.li/i/14647940"
+            }
+          ]
+        },
+        {
+          "key": 5,
+          "name": "功能类-微信红包自动领取",
+          "desc": "自动领取私聊红包,群聊红包",
+          "rules": [
+            {
+              "name": "从红包结算界面返回",
+              "preKeys": [
+                1,
+                2
+              ],
+              "activityIds": "com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyBeforeDetailUI",
+              "matches": "ImageView[desc=\"返回\"]",
+              "snapshotUrls": "https://i.gkd.li/i/12567696"
+            },
+            {
+              "key": 1,
+              "name": "点击红包-开",
+              "activityIds": "com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyNotHookReceiveUI",
+              "matches": "ImageButton[desc=\"开\"] + Button[desc=\"开\"]",
+              "snapshotUrls": [
+                "https://i.gkd.li/i/12567697",
+                "https://i.gkd.li/i/12567698"
+              ]
+            },
+            {
+              "key": 2,
+              "name": "点击别人发的红包",
+              "activityIds": "com.tencent.mm.ui.LauncherUI",
+              "matches": "LinearLayout[childCount=1] >5 LinearLayout[childCount=1] - ImageView < LinearLayout + View + RelativeLayout > TextView[text=\"微信红包\"][id!=null]",
+              "snapshotUrls": "https://i.gkd.li/i/12567637"
+            }
+          ]
+        },
+      ]
+    }
+  ]
+}
