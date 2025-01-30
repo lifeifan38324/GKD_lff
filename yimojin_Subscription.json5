@@ -1,10 +1,10 @@
 {
   "id": 133,
   "name": "yimojin_Subscription",
-  "version": 0,
+  "version": 1,
   "author": "yimojin",
-  "updateUrl": "https://gist.github.com/lisonge/3f5693182ad4ef5e307be760dba22bcb/raw/gkd.json5",
-  "checkUpdateUrl": "https://gist.github.com/lisonge/3f5693182ad4ef5e307be760dba22bcb/raw/gkd.json5",
+  "updateUrl": "https://raw.githubusercontent.com/lifeifan38324/GKD_lff/refs/heads/master/yimojin_Subscription.json5",
+  "checkUpdateUrl": "https://raw.githubusercontent.com/lifeifan38324/GKD_lff/refs/heads/master/yimojin_Subscription_checkUpdateUrl.json5",
   "supportUri": "https://gkd.li/",
   "categories": [],
   "globalGroups": [],
@@ -18,19 +18,37 @@
           "name": "垃圾广告-我的下方",
           "desc": "点击x按钮关闭广告",
           "activityIds": [
-            "com.jooan.qalink.com.jooan.qiaoanzhilian.ali.view.main_page.NewMainDeviceListActivity",
+            "com.jooan.qalink.com.jooan.qiaoanzhilian.ali.view.main_page.NewMainDeviceListActivity"
           ],
           "rules": [
             {
               "key": -1,
               "fastQuery": true,
-              "matches": 'ImageView[vid="anythink_myoffer_banner_close" && clickable=true]',
+              "matches": "ImageView[vid=\"anythink_myoffer_banner_close\" && clickable=true]",
               "snapshotUrls": [
-                "https://i.gkd.li/snapshot/1737640566313",
+                "https://i.gkd.li/snapshot/1737640566313"
               ]
-            },
-            ]
-        },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "com.android.permissioncontroller",
+      "name": "安卓权限控制器",
+      "groups": [
+        {
+          "key": 1,
+          "name": "权限控制器-照片视频权限",
+          "desc": "申请照片权限时，点击保持当前范围",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": "com.android.permissioncontroller.permission.ui.GrantPermissionsActivity",
+              "matches": "@Button[text=\"保持当前范围\"] -2 Button < LinearLayout - ScrollView >4 TextView[text^=\"允许Telegram访问此设备上的更多照片\"]"
+            }
+          ]
+        }
       ]
     }
   ]
