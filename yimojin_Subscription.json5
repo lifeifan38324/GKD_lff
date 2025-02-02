@@ -1,7 +1,7 @@
 {
   "id": 133,
   "name": "yimojin_Subscription",
-  "version": 1,
+  "version": 2,
   "author": "yimojin",
   "updateUrl": "https://raw.githubusercontent.com/lifeifan38324/GKD_lff/refs/heads/master/yimojin_Subscription.json5",
   "checkUpdateUrl": "https://raw.githubusercontent.com/lifeifan38324/GKD_lff/refs/heads/master/yimojin_Subscription_checkUpdateUrl.json5",
@@ -34,6 +34,37 @@
       ]
     },
     {
+      "id": "com.tencent.mm",
+      "name": "微信",
+      "groups": [
+        {
+          "key": 1,
+          "name": "朋友圈企业号广告",
+          "desc": "点击向下箭头, 选择我不感兴趣",
+          "rules": [
+            {
+              "fastQuery": true,
+              "activityIds": "com.tencent.mm.plugin.sns.ui.improve.ImproveSnsTimelineUI",
+              "matches": "@FrameLayout[vid=\"kjq\"]",
+              "action": "clickCenter",
+              "snapshotUrls": [
+                "https://i.gkd.li/snapshot/1738465294805"
+              ]
+            },
+            {
+              "fastQuery": true,
+              "activityIds": "com.tencent.mm.plugin.sns.ui.improve.ImproveSnsTimelineUI",
+              "matches": "@LinearLayout > RelativeLayout[vid=\"n_w\"]",
+              "action": "clickCenter",
+              "snapshotUrls": [
+                "https://i.gkd.li/snapshot/1738465299517"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "com.android.permissioncontroller",
       "name": "安卓权限控制器",
       "groups": [
@@ -46,6 +77,9 @@
               "fastQuery": true,
               "activityIds": "com.android.permissioncontroller.permission.ui.GrantPermissionsActivity",
               "matches": "@Button[text=\"保持当前范围\"] -2 Button < LinearLayout - ScrollView >4 TextView[text^=\"允许Telegram访问此设备上的更多照片\"]"
+              "snapshotUrls": [
+                ""
+              ]
             }
           ]
         }
